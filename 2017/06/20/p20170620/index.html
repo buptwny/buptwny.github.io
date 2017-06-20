@@ -12,26 +12,23 @@
 
     
     <meta name="description" content="linux想要查看文件的详细信息，可以通过执行ls -la进行查看      
-####其中‘l’代表long，即显示详细信息       
-####‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
-####可以看到，显示的列表分为7列第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一">
+其中‘l’代表long，即显示详细信息‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
+可以看到，显示的列表分为7列第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="shell 命令 ls -la 参数解析">
 <meta property="og:url" content="http://buptwny.github.io/2017/06/20/p20170620/index.html">
 <meta property="og:site_name" content="前端攻城狮">
 <meta property="og:description" content="linux想要查看文件的详细信息，可以通过执行ls -la进行查看      
-####其中‘l’代表long，即显示详细信息       
-####‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
-####可以看到，显示的列表分为7列第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一">
+其中‘l’代表long，即显示详细信息‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
+可以看到，显示的列表分为7列第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组">
 <meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-2.png">
-<meta property="og:updated_time" content="2017-06-20T16:33:02.000Z">
+<meta property="og:updated_time" content="2017-06-20T16:38:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell 命令 ls -la 参数解析">
 <meta name="twitter:description" content="linux想要查看文件的详细信息，可以通过执行ls -la进行查看      
-####其中‘l’代表long，即显示详细信息       
-####‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
-####可以看到，显示的列表分为7列第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一">
+其中‘l’代表long，即显示详细信息‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
+可以看到，显示的列表分为7列第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-1.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
@@ -109,14 +106,13 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其中‘l’代表long，即显示详细信息‘a’代表all，即显示所有信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">可以看到，显示的列表分为7列</span></a></li></ol>
 		
 		</div>
 		
 		<p>linux想要查看文件的详细信息，可以通过执行ls -la进行查看      </p>
-<p>####其中‘l’代表long，即显示详细信息       </p>
-<p>####‘a’代表all，即显示所有信息<br>如执行ls -la .git，查看本地git仓库具体信息如下：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-1.png" alt="图1">    </p>
-<p>####可以看到，显示的列表分为7列<br>第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组的用户和其他用户的文件访问权限。(r表示可读，w表示可写，x表示可执行)<br>如：－rwx-w-r–表示该项为文件，使用者的权限为可读可写可执行,同组用户的权限为不可读可写不可执行，其他用户的权限为可读不可写不可执行。<br>第二列：文件数量<br>第三列：文件拥有者，一般是账号名称<br>第四列：文件拥有者所属的组<br>第五列：文件大小<br>第六列：文件创建时间<br>第七列：文件名称     </p>
+<p></p><h4>其中‘l’代表long，即显示详细信息<br>‘a’代表all，即显示所有信息</h4><br>如执行ls -la .git，查看本地git仓库具体信息如下：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-1.png" alt="图1">    <p></p>
+<p></p><h4>可以看到，显示的列表分为7列</h4><br>第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组的用户和其他用户的文件访问权限。(r表示可读，w表示可写，x表示可执行)<br>如：－rwx-w-r–表示该项为文件，使用者的权限为可读可写可执行,同组用户的权限为不可读可写不可执行，其他用户的权限为可读不可写不可执行。<br>第二列：文件数量<br>第三列：文件拥有者，一般是账号名称<br>第四列：文件拥有者所属的组<br>第五列：文件大小<br>第六列：文件创建时间<br>第七列：文件名称     <p></p>
 <p><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-2.png" alt="图2">    </p>
   
 	</div>
@@ -166,7 +162,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">其中‘l’代表long，即显示详细信息‘a’代表all，即显示所有信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">可以看到，显示的列表分为7列</span></a></li></ol>
  
   </div>
 
