@@ -4,19 +4,34 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端攻城狮</title>
+    <title>yii2框架通过自定义Controller进行登录态获取 | 前端攻城狮</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="NingYu Wu">
     
 
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="前端攻城狮">
-<meta property="og:url" content="http://buptwny.github.io/index.html">
+    <meta name="description" content="1.自定义controller，若cookie中存在username,则获取登录态和用户名： 
+其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:   
+2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yii2框架通过自定义Controller进行登录态获取">
+<meta property="og:url" content="http://buptwny.github.io/2017/06/27/p20170628/index.html">
 <meta property="og:site_name" content="前端攻城狮">
+<meta property="og:description" content="1.自定义controller，若cookie中存在username,则获取登录态和用户名： 
+其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:   
+2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除u">
+<meta property="og:image" content="http://buptwny.github.io/a4-01.png">
+<meta property="og:image" content="http://buptwny.github.io/a4-02.png">
+<meta property="og:image" content="http://buptwny.github.io/a4-03.png">
+<meta property="og:image" content="http://buptwny.github.io/a4-04.png">
+<meta property="og:updated_time" content="2017-06-28T07:44:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端攻城狮">
+<meta name="twitter:title" content="yii2框架通过自定义Controller进行登录态获取">
+<meta name="twitter:description" content="1.自定义controller，若cookie中存在username,则获取登录态和用户名： 
+其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:   
+2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除u">
+<meta name="twitter:image" content="http://buptwny.github.io/a4-01.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
 
@@ -71,72 +86,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记" itemprop="url">常用JS正则表达笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> Published 2017-06-27</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>1.11位手机号:</p>
-<pre>
-    <code>
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert("手机号码有误，请重填");
-            return;
-        }
-    </code>
-</pre>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/27/p20170627/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/27/p20170627/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2017/06/27/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">yii2框架通过自定义Controller进行登录态获取</a>
@@ -150,20 +103,22 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>1.自定义controller，若cookie中存在username,则获取登录态和用户名：<br><img src="a4-01.png" alt="图1"> </p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			
+		
+		</div>
+		
+		<p>1.自定义controller，若cookie中存在username,则获取登录态和用户名：<br><img src="a4-01.png" alt="图1"> </p>
 <p>其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:<br><img src="a4-02.png" alt="图2">   </p>
 <p>2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除username的cookie：<br><img src="a4-03.png" alt="图3">     </p>
 <p>3.在view渲染的时候进行登录态判断<br><img src="a4-04.png" alt="图4"><br>其中js逻辑省略，只需要理解上面的php部分逻辑</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -171,137 +126,55 @@
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://buptwny.github.io/2017/06/27/p20170628/" data-title="yii2框架通过自定义Controller进行登录态获取 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/27/p20170628/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/27/p20170628/" data-count-type="comments">&nbsp;</a>
-	
-</div>
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/20/p20170620/" title="shell 命令 ls -la 参数解析" itemprop="url">shell 命令 ls -la 参数解析</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-19T16:20:17.000Z" itemprop="datePublished"> Published 2017-06-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>linux想要查看文件的详细信息，可以通过执行ls -la进行查看      </p>
-<p></p><h4>其中‘l’代表long，即显示详细信息<br>‘a’代表all，即显示所有信息</h4><br>如执行ls -la .git，查看本地git仓库具体信息如下：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-1.png" alt="图1">    <p></p>
-<p></p><h4>可以看到，显示的列表分为7列</h4><br>第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组的用户和其他用户的文件访问权限。(r表示可读，w表示可写，x表示可执行)<br>如：－rwx-w-r–表示该项为文件，使用者的权限为可读可写可执行,同组用户的权限为不可读可写不可执行，其他用户的权限为可读不可写不可执行。<br>第二列：文件数量<br>第三列：文件拥有者，一般是账号名称<br>第四列：文件拥有者所属的组<br>第五列：文件大小<br>第六列：文件创建时间<br>第七列：文件名称     <p></p>
-<p><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-2.png" alt="图2">    </p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-	  	<span></span>
-		<a href="/2017/06/20/p20170620/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/20/p20170620/" data-count-type="comments">&nbsp;</a>
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记">
+  <strong>上一篇：</strong><br/>
+  <span>
+  常用JS正则表达笔记</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2017/06/20/p20170620/"  title="shell 命令 ls -la 参数解析">
+ <strong>下一篇：</strong><br/> 
+ <span>shell 命令 ls -la 参数解析
+</span>
+</a>
+</div>
+
+</nav>
+
 	
-</div>
-
-</footer>
-
-
-    </article>
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2017/06/27/p20170628/" data-title="yii2框架通过自定义Controller进行登录态获取" data-url="http://buptwny.github.io/2017/06/27/p20170628/"></div>
+</section>
 
 
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/02/24/hello/" title="轻轻滴我来了" itemprop="url">轻轻滴我来了</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-24T10:32:17.000Z" itemprop="datePublished"> Published 2017-02-24</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>白日依山尽，黄河入海流<br>欲穷千里目，更上一层楼</p>
-<p>谢谢使用Hexo</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/02/24/hello/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/24/hello/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -440,14 +313,103 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"rlovep"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
 
 
 
@@ -508,4 +470,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
