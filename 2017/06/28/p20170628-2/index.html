@@ -4,41 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>常用JS正则表达笔记 | 前端攻城狮</title>
+    <title>yii2框架自定义过滤器 | 前端攻城狮</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="NingYu Wu">
     
 
     
-    <meta name="description" content="1.11位手机号:
-
-    
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert(&quot;手机号码有误，请重填&quot;);
-            return;
-        }">
+    <meta name="description" content="1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定义的过滤器进行具体编写">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用JS正则表达笔记">
-<meta property="og:url" content="http://buptwny.github.io/2017/06/27/p20170627/index.html">
+<meta property="og:title" content="yii2框架自定义过滤器">
+<meta property="og:url" content="http://buptwny.github.io/2017/06/28/p20170628-2/index.html">
 <meta property="og:site_name" content="前端攻城狮">
-<meta property="og:description" content="1.11位手机号:
-
-    
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert(&quot;手机号码有误，请重填&quot;);
-            return;
-        }">
-<meta property="og:updated_time" content="2017-06-27T11:47:49.000Z">
+<meta property="og:description" content="1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定义的过滤器进行具体编写">
+<meta property="og:image" content="http://buptwny.github.io/a4-01-01.png">
+<meta property="og:image" content="http://buptwny.github.io/a4-01-02.png">
+<meta property="og:image" content="http://buptwny.github.io/a4-01-03.png">
+<meta property="og:image" content="http://buptwny.github.io/a4-01-04.png">
+<meta property="og:updated_time" content="2017-06-28T08:06:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用JS正则表达笔记">
-<meta name="twitter:description" content="1.11位手机号:
-
-    
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert(&quot;手机号码有误，请重填&quot;);
-            return;
-        }">
+<meta name="twitter:title" content="yii2框架自定义过滤器">
+<meta name="twitter:description" content="1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定义的过滤器进行具体编写">
+<meta name="twitter:image" content="http://buptwny.github.io/a4-01-01.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
 
@@ -99,14 +86,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记" itemprop="url">常用JS正则表达笔记</a>
+      <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">yii2框架自定义过滤器</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> Published 2017-06-27</time>
+    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished"> Published 2017-06-28</time>
     
   </p>
 </header>
@@ -119,15 +106,8 @@
 		
 		</div>
 		
-		<p>1.11位手机号:</p>
-<pre>
-    <code>
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert("手机号码有误，请重填");
-            return;
-        }
-    </code>
-</pre>  
+		<p>1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:<br><img src="a4-01-01.png" alt="图1"><br>2.定义TestController:<br><img src="a4-01-02.png" alt="图2"><br>若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:<br><img src="a4-01-03.png" alt="图3"><br><img src="a4-01-04.png" alt="图3"><br>具体的实际应用可以通过自定义的过滤器进行具体编写</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -139,7 +119,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://buptwny.github.io/2017/06/27/p20170627/" data-title="常用JS正则表达笔记 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
+	  <div data-url="http://buptwny.github.io/2017/06/28/p20170628-2/" data-title="yii2框架自定义过滤器 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -152,19 +132,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取">
-  <strong>上一篇：</strong><br/>
-  <span>
-  yii2框架通过自定义Controller进行登录态获取</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/06/20/p20170620/"  title="shell 命令 ls -la 参数解析">
+<a href="/2017/06/28/p20170628/"  title="yii2框架通过自定义Controller进行登录态获取">
  <strong>下一篇：</strong><br/> 
- <span>shell 命令 ls -la 参数解析
+ <span>yii2框架通过自定义Controller进行登录态获取
 </span>
 </a>
 </div>
@@ -173,7 +145,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2017/06/27/p20170627/" data-title="常用JS正则表达笔记" data-url="http://buptwny.github.io/2017/06/27/p20170627/"></div>
+	<div class="ds-thread" data-thread-key="2017/06/28/p20170628-2/" data-title="yii2框架自定义过滤器" data-url="http://buptwny.github.io/2017/06/28/p20170628-2/"></div>
 </section>
 
 
