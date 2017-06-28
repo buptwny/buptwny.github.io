@@ -46,7 +46,7 @@
 				<h1 class="site-name"><a href="/" title="前端攻城狮">前端攻城狮</a></h1>
 				<h2 class="blog-motto">村里有个前端叫小吴</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -62,7 +62,7 @@
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="Search"><br>
+						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
 						</form>
 					
 					</li>
@@ -79,6 +79,62 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">yii2框架通过自定义Controller进行登录态获取</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
+		
+  <p class="article-time">
+    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished"> 发表于 2017-06-28</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>1.自定义controller，若cookie中存在username,则获取登录态和用户名：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01.png" alt="图1"> </p>
+<p>其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-02.png" alt="图2">   </p>
+<p>2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除username的cookie：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-03.png" alt="图3">     </p>
+<p>3.在view渲染的时候进行登录态判断<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-04.png" alt="图4"><br>其中js逻辑省略，只需要理解上面的php部分逻辑</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/06/28/p20170628/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/28/p20170628/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记" itemprop="url">常用JS正则表达笔记</a>
   </h1>
   <p class="article-author">By
@@ -86,7 +142,7 @@
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> Published 2017-06-27</time>
+    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> 发表于 2017-06-27</time>
     
   </p>
 </header>
@@ -139,62 +195,6 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/06/27/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">yii2框架通过自定义Controller进行登录态获取</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> Published 2017-06-27</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>1.自定义controller，若cookie中存在username,则获取登录态和用户名：<br><img src="a4-01.png" alt="图1"> </p>
-<p>其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:<br><img src="a4-02.png" alt="图2">   </p>
-<p>2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除username的cookie：<br><img src="a4-03.png" alt="图3">     </p>
-<p>3.在view渲染的时候进行登录态判断<br><img src="a4-04.png" alt="图4"><br>其中js逻辑省略，只需要理解上面的php部分逻辑</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/27/p20170628/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/27/p20170628/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2017/06/20/p20170620/" title="shell 命令 ls -la 参数解析" itemprop="url">shell 命令 ls -la 参数解析</a>
   </h1>
   <p class="article-author">By
@@ -202,7 +202,7 @@
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-06-19T16:20:17.000Z" itemprop="datePublished"> Published 2017-06-20</time>
+    <time datetime="2017-06-19T16:20:17.000Z" itemprop="datePublished"> 发表于 2017-06-20</time>
     
   </p>
 </header>
@@ -258,7 +258,7 @@
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-02-24T10:32:17.000Z" itemprop="datePublished"> Published 2017-02-24</time>
+    <time datetime="2017-02-24T10:32:17.000Z" itemprop="datePublished"> 发表于 2017-02-24</time>
     
   </p>
 </header>
@@ -301,10 +301,10 @@
 
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -312,7 +312,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -331,13 +331,13 @@
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2026326475&verifier=039d33aa&dpc=1"></iframe>
 </div>
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
 </aside>
@@ -491,7 +491,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
