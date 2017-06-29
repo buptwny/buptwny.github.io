@@ -23,16 +23,16 @@ cd /www/html/basiccomposer require –prefer-dist yii">
 mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
 2.安装redis，redis的安装步骤省略3.安装yii2的redis扩展方法一：   
 cd /www/html/basiccomposer require –prefer-dist yii">
-<meta property="og:image" content="http://buptwny.github.io/a5-01-01.png">
-<meta property="og:image" content="http://buptwny.github.io/a5-01-02.png">
-<meta property="og:updated_time" content="2017-06-29T03:51:27.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-02.png">
+<meta property="og:updated_time" content="2017-06-29T03:54:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yii2框架安装并使用redis扩展笔记">
 <meta name="twitter:description" content="1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过
 mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
 2.安装redis，redis的安装步骤省略3.安装yii2的redis扩展方法一：   
 cd /www/html/basiccomposer require –prefer-dist yii">
-<meta name="twitter:image" content="http://buptwny.github.io/a5-01-01.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-01.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
 
@@ -62,7 +62,7 @@ cd /www/html/basiccomposer require –prefer-dist yii">
 				<h1 class="site-name"><a href="/" title="前端攻城狮">前端攻城狮</a></h1>
 				<h2 class="blog-motto">村里有个前端叫小吴</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -78,7 +78,7 @@ cd /www/html/basiccomposer require –prefer-dist yii">
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="Search"><br>
+						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
 						</form>
 					
 					</li>
@@ -100,14 +100,14 @@ cd /www/html/basiccomposer require –prefer-dist yii">
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-06-29T03:35:00.000Z" itemprop="datePublished"> Published 2017-06-29</time>
+    <time datetime="2017-06-29T03:35:00.000Z" itemprop="datePublished"> 发表于 2017-06-29</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			
 		
@@ -116,8 +116,8 @@ cd /www/html/basiccomposer require –prefer-dist yii">
 		<p>1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过</p>
 <p><pre><code>mv composer.phar /usr/local/bin composer</code></pre><br>将composer命令设置为全局命令</p>
 <p>2.安装redis，redis的安装步骤省略<br>3.安装yii2的redis扩展<br>方法一：   </p>
-<p><pre><code>cd /www/html/basic<br>composer require –prefer-dist yiisoft/yii2-redis</code></pre><br>方法二：<br>到<a href="https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置" target="_blank" rel="external">https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置</a>:<br><img src="a5-01-01.png" alt="图1"><br>4.在redis的 src文件夹下执行./redis-server命令启动redis服务<br>5.配置basic/config/web.php,在components数组中添加组件：</p>
-<p><pre><code>‘redis’ =&gt; [<br>    ‘class’ =&gt; ‘yii\redis\Connection’,<br>    ‘hostname’ =&gt; ‘localhost’,<br>    ‘port’ =&gt; 6379,<br>    ‘database’ =&gt; 0,<br>],</code></pre><br>6.使用redis（切记一定要执行第4步保证redis服务已经启动）:<br><img src="a5-01-02.png" alt="图1"></p>
+<p><pre><code>cd /www/html/basic<br>composer require –prefer-dist yiisoft/yii2-redis</code></pre><br>方法二：<br>到<a href="https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置" target="_blank" rel="external">https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置</a>:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-01.png" alt="图1"><br>4.在redis的 src文件夹下执行./redis-server命令启动redis服务<br>5.配置basic/config/web.php,在components数组中添加组件：</p>
+<p><pre><code>‘redis’ =&gt; [<br>    ‘class’ =&gt; ‘yii\redis\Connection’,<br>    ‘hostname’ =&gt; ‘localhost’,<br>    ‘port’ =&gt; 6379,<br>    ‘database’ =&gt; 0,<br>],</code></pre><br>6.使用redis（切记一定要执行第4步保证redis服务已经启动）:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-02.png" alt="图1"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -161,17 +161,17 @@ cd /www/html/basiccomposer require –prefer-dist yii">
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -179,7 +179,7 @@ cd /www/html/basiccomposer require –prefer-dist yii">
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -198,13 +198,13 @@ cd /www/html/basiccomposer require –prefer-dist yii">
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2026326475&verifier=039d33aa&dpc=1"></iframe>
 </div>
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
 </aside>
@@ -447,7 +447,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
