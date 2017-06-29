@@ -4,28 +4,35 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>yii2框架自定义过滤器 | 前端攻城狮</title>
+    <title>yii2框架安装并使用redis扩展笔记 | 前端攻城狮</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="NingYu Wu">
     
 
     
-    <meta name="description" content="1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定义的过滤器进行具体编写">
+    <meta name="description" content="1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过
+mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
+2.安装redis，redis的安装步骤省略3.安装yii2的redis扩展方法一：   
+cd /www/html/basiccomposer require –prefer-dist yii">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yii2框架自定义过滤器">
-<meta property="og:url" content="http://buptwny.github.io/2017/06/28/p20170628-2/index.html">
+<meta property="og:title" content="yii2框架安装并使用redis扩展笔记">
+<meta property="og:url" content="http://buptwny.github.io/2017/06/29/p20170629-1/index.html">
 <meta property="og:site_name" content="前端攻城狮">
-<meta property="og:description" content="1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定义的过滤器进行具体编写">
-<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-01.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-02.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-03.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-04.png">
-<meta property="og:updated_time" content="2017-06-28T08:09:51.000Z">
+<meta property="og:description" content="1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过
+mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
+2.安装redis，redis的安装步骤省略3.安装yii2的redis扩展方法一：   
+cd /www/html/basiccomposer require –prefer-dist yii">
+<meta property="og:image" content="http://buptwny.github.io/a5-01-01.png">
+<meta property="og:image" content="http://buptwny.github.io/a5-01-02.png">
+<meta property="og:updated_time" content="2017-06-29T03:51:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yii2框架自定义过滤器">
-<meta name="twitter:description" content="1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定义的过滤器进行具体编写">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-01.png">
+<meta name="twitter:title" content="yii2框架安装并使用redis扩展笔记">
+<meta name="twitter:description" content="1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过
+mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
+2.安装redis，redis的安装步骤省略3.安装yii2的redis扩展方法一：   
+cd /www/html/basiccomposer require –prefer-dist yii">
+<meta name="twitter:image" content="http://buptwny.github.io/a5-01-01.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
 
@@ -86,14 +93,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">yii2框架自定义过滤器</a>
+      <a href="/2017/06/29/p20170629-1/" title="yii2框架安装并使用redis扩展笔记" itemprop="url">yii2框架安装并使用redis扩展笔记</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished"> Published 2017-06-28</time>
+    <time datetime="2017-06-29T03:35:00.000Z" itemprop="datePublished"> Published 2017-06-29</time>
     
   </p>
 </header>
@@ -106,7 +113,11 @@
 		
 		</div>
 		
-		<p>1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-01.png" alt="图1"><br>2.定义TestController:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-02.png" alt="图2"><br>若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-03.png" alt="图3"><br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-04.png" alt="图3"><br>具体的实际应用可以通过自定义的过滤器进行具体编写</p>
+		<p>1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过</p>
+<p><pre><code>mv composer.phar /usr/local/bin composer</code></pre><br>将composer命令设置为全局命令</p>
+<p>2.安装redis，redis的安装步骤省略<br>3.安装yii2的redis扩展<br>方法一：   </p>
+<p><pre><code>cd /www/html/basic<br>composer require –prefer-dist yiisoft/yii2-redis</code></pre><br>方法二：<br>到<a href="https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置" target="_blank" rel="external">https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置</a>:<br><img src="a5-01-01.png" alt="图1"><br>4.在redis的 src文件夹下执行./redis-server命令启动redis服务<br>5.配置basic/config/web.php,在components数组中添加组件：</p>
+<p><pre><code>‘redis’ =&gt; [<br>    ‘class’ =&gt; ‘yii\redis\Connection’,<br>    ‘hostname’ =&gt; ‘localhost’,<br>    ‘port’ =&gt; 6379,<br>    ‘database’ =&gt; 0,<br>],</code></pre><br>6.使用redis（切记一定要执行第4步保证redis服务已经启动）:<br><img src="a5-01-02.png" alt="图1"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -119,7 +130,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://buptwny.github.io/2017/06/28/p20170628-2/" data-title="yii2框架自定义过滤器 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
+	  <div data-url="http://buptwny.github.io/2017/06/29/p20170629-1/" data-title="yii2框架安装并使用redis扩展笔记 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -132,19 +143,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/06/29/p20170629-1/" title="yii2框架安装并使用redis扩展笔记">
-  <strong>上一篇：</strong><br/>
-  <span>
-  yii2框架安装并使用redis扩展笔记</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/06/28/p20170628/"  title="yii2框架通过自定义Controller进行登录态获取">
+<a href="/2017/06/28/p20170628-2/"  title="yii2框架自定义过滤器">
  <strong>下一篇：</strong><br/> 
- <span>yii2框架通过自定义Controller进行登录态获取
+ <span>yii2框架自定义过滤器
 </span>
 </a>
 </div>
@@ -153,7 +156,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2017/06/28/p20170628-2/" data-title="yii2框架自定义过滤器" data-url="http://buptwny.github.io/2017/06/28/p20170628-2/"></div>
+	<div class="ds-thread" data-thread-key="2017/06/29/p20170629-1/" data-title="yii2框架安装并使用redis扩展笔记" data-url="http://buptwny.github.io/2017/06/29/p20170629-1/"></div>
 </section>
 
 

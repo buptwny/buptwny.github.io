@@ -79,6 +79,63 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/06/29/p20170629-1/" title="yii2框架安装并使用redis扩展笔记" itemprop="url">yii2框架安装并使用redis扩展笔记</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
+		
+  <p class="article-time">
+    <time datetime="2017-06-29T03:35:00.000Z" itemprop="datePublished"> Published 2017-06-29</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过</p>
+<p><pre><code>mv composer.phar /usr/local/bin composer</code></pre><br>将composer命令设置为全局命令</p>
+<p>2.安装redis，redis的安装步骤省略<br>3.安装yii2的redis扩展<br>方法一：   </p>
+<p><pre><code>cd /www/html/basic<br>composer require –prefer-dist yiisoft/yii2-redis</code></pre><br>方法二：<br>到<a href="https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置" target="_blank" rel="external">https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置</a>:<br><img src="a5-01-01.png" alt="图1"><br>4.在redis的 src文件夹下执行./redis-server命令启动redis服务<br>5.配置basic/config/web.php,在components数组中添加组件：</p>
+<p><pre><code>‘redis’ =&gt; [<br>    ‘class’ =&gt; ‘yii\redis\Connection’,<br>    ‘hostname’ =&gt; ‘localhost’,<br>    ‘port’ =&gt; 6379,<br>    ‘database’ =&gt; 0,<br>],</code></pre><br>6.使用redis（切记一定要执行第4步保证redis服务已经启动）:<br><img src="a5-01-02.png" alt="图1"></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/06/29/p20170629-1/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/29/p20170629-1/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">yii2框架自定义过滤器</a>
   </h1>
   <p class="article-author">By
