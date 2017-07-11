@@ -46,7 +46,7 @@
 				<h1 class="site-name"><a href="/" title="前端攻城狮">前端攻城狮</a></h1>
 				<h2 class="blog-motto">村里有个前端叫小吴</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -62,7 +62,7 @@
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="Search"><br>
 						</form>
 					
 					</li>
@@ -73,336 +73,132 @@
     <div id="container">
       <div id="main">
 
-   
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/06/29/p20170629-1/" title="yii2框架安装并使用redis扩展笔记" itemprop="url">
+  
+    <h1 itemprop="name">yii2框架安装并使用redis扩展笔记</h1>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/29/p20170629-1/" title="yii2框架安装并使用redis扩展笔记" itemprop="url">yii2框架安装并使用redis扩展笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-29T03:35:00.000Z" itemprop="datePublished"> 发表于 2017-06-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
+     
+           <p itemprop="description" >1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过
+mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
+2.安装redis，redis的安装步骤省略3.安装yii2的redis扩</p>
         
-        <p>1.首先要安装composer,composer的具体安装步骤省略，安装完成后可以通过</p>
-<p><pre><code>mv composer.phar /usr/local/bin composer</code></pre><br>将composer命令设置为全局命令</p>
-<p>2.安装redis，redis的安装步骤省略<br>3.安装yii2的redis扩展<br>方法一：   </p>
-<p><pre><code>cd /www/html/basic<br>composer require –prefer-dist yiisoft/yii2-redis</code></pre><br>方法二：<br>到<a href="https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置" target="_blank" rel="external">https://github.com/yiisoft/yii2-redis下载yii2-redis文件，并放到yiisoft的相应位置</a>:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-01.png" alt="图1"><br>4.在redis的 src文件夹下执行./redis-server命令启动redis服务<br>5.配置basic/config/web.php,在components数组中添加组件：</p>
-<p><pre><code>‘redis’ =&gt; [<br>    ‘class’ =&gt; ‘yii\redis\Connection’,<br>    ‘hostname’ =&gt; ‘localhost’,<br>    ‘port’ =&gt; 6379,<br>    ‘database’ =&gt; 0,<br>],</code></pre><br>6.使用redis（切记一定要执行第4步保证redis服务已经启动）:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a05/a5-01-02.png" alt="图1"></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/29/p20170629-1/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/29/p20170629-1/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+    <time datetime="2017-06-29T03:35:00.000Z" itemprop="datePublished">2017-06-29</time>
+  </a>
+</section>
+
+
+
+
+
+
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">
+  
+    <h1 itemprop="name">yii2框架自定义过滤器</h1>
     
-      <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">yii2框架自定义过滤器</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished"> 发表于 2017-06-28</time>
-    
-  </p>
-</header>
-    <div class="article-content">
+     
+           <p itemprop="description" >1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定</p>
         
-        <p>1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-01.png" alt="图1"><br>2.定义TestController:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-02.png" alt="图2"><br>若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-03.png" alt="图3"><br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01-04.png" alt="图3"><br>具体的实际应用可以通过自定义的过滤器进行具体编写</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/28/p20170628-2/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/28/p20170628-2/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished">2017-06-28</time>
+  </a>
+</section>
+
+
+
+
+
+
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">
+  
+    <h1 itemprop="name">yii2框架通过自定义Controller进行登录态获取</h1>
     
-      <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">yii2框架通过自定义Controller进行登录态获取</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished"> 发表于 2017-06-28</time>
-    
-  </p>
-</header>
-    <div class="article-content">
+     
+           <p itemprop="description" >1.自定义controller，若cookie中存在username,则获取登录态和用户名： 
+其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进</p>
         
-        <p>1.自定义controller，若cookie中存在username,则获取登录态和用户名：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-01.png" alt="图1"> </p>
-<p>其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进行初始化:<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-02.png" alt="图2">   </p>
-<p>2.在后台cgi中进行cookie操作,若登录成功则添加username的cookie，若登出则删除username的cookie：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-03.png" alt="图3">     </p>
-<p>3.在view渲染的时候进行登录态判断<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a04/a4-04.png" alt="图4"><br>其中js逻辑省略，只需要理解上面的php部分逻辑</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/28/p20170628/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/28/p20170628/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+    <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished">2017-06-28</time>
+  </a>
+</section>
+
+
+
+
+
+
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记" itemprop="url">
+  
+    <h1 itemprop="name">常用JS正则表达笔记</h1>
     
-      <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记" itemprop="url">常用JS正则表达笔记</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> 发表于 2017-06-27</time>
+     
+           <p itemprop="description" >1.11位手机号:
+
     
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>1.11位手机号:</p>
-<pre>
-    <code>
     if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert("手机号码有误，请重填");
+            alert(&quot;手机号码有误，请重填&quot;);
             return;
-        }
-    </code>
-</pre>
+        }</p>
         
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/27/p20170627/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/27/p20170627/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished">2017-06-27</time>
+  </a>
+</section>
+
+
+
+
+
+
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/06/20/p20170620/" title="shell 命令 ls -la 参数解析" itemprop="url">
+  
+    <h1 itemprop="name">shell 命令 ls -la 参数解析</h1>
     
-      <a href="/2017/06/20/p20170620/" title="shell 命令 ls -la 参数解析" itemprop="url">shell 命令 ls -la 参数解析</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-19T16:20:17.000Z" itemprop="datePublished"> 发表于 2017-06-20</time>
+     
+           <p itemprop="description" >linux想要查看文件的详细信息，可以通过执行ls -la进行查看      
+其中‘l’代表long，即显示详细信息‘a’代表all，即显示所有信息如执行ls -la .git，查看本地git仓库具体信息如下：    
+可以看到，显示的列表分为7列第一列：文件权限，一共有10个</p>
+        
     
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>linux想要查看文件的详细信息，可以通过执行ls -la进行查看      </p>
-<p></p><h4>其中‘l’代表long，即显示详细信息<br>‘a’代表all，即显示所有信息</h4><br>如执行ls -la .git，查看本地git仓库具体信息如下：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-1.png" alt="图1">    <p></p>
-<p></p><h4>可以看到，显示的列表分为7列</h4><br>第一列：文件权限，一共有10个二进制位，第一位表示该项是否为文件夹，若为d则表示文件夹。剩下的9位以每3位为一组，分别表示该项的使用用户、与用户同一组的用户和其他用户的文件访问权限。(r表示可读，w表示可写，x表示可执行)<br>如：－rwx-w-r–表示该项为文件，使用者的权限为可读可写可执行,同组用户的权限为不可读可写不可执行，其他用户的权限为可读不可写不可执行。<br>第二列：文件数量<br>第三列：文件拥有者，一般是账号名称<br>第四列：文件拥有者所属的组<br>第五列：文件大小<br>第六列：文件创建时间<br>第七列：文件名称     <p></p>
-<p><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a02/a2-2.png" alt="图2">    </p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/06/20/p20170620/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/06/20/p20170620/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
+    <time datetime="2017-06-19T16:20:17.000Z" itemprop="datePublished">2017-06-20</time>
+  </a>
+</section>
 
 
 
 
 
 
-   
+  
+<section class="post" itemscope itemprop="blogitem">
+  
+    <a href="/2017/02/24/hello/" title="轻轻滴我来了" itemprop="url">
+  
+    <h1 itemprop="name">轻轻滴我来了</h1>
     
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
+     
+           <p itemprop="description" >白日依山尽，黄河入海流欲穷千里目，更上一层楼
+谢谢使用Hexo</p>
+        
     
-      <a href="/2017/02/24/hello/" title="轻轻滴我来了" itemprop="url">轻轻滴我来了</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-24T10:32:17.000Z" itemprop="datePublished"> 发表于 2017-02-24</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>白日依山尽，黄河入海流<br>欲穷千里目，更上一层楼</p>
-<p>谢谢使用Hexo</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/02/24/hello/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/24/hello/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
+    <time datetime="2017-02-24T10:32:17.000Z" itemprop="datePublished">2017-02-24</time>
+  </a>
+</section>
 
 
 
@@ -411,10 +207,10 @@
 
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -422,7 +218,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -441,13 +237,13 @@
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2026326475&verifier=039d33aa&dpc=1"></iframe>
 </div>
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -601,7 +397,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
