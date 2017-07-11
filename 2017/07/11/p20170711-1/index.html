@@ -4,41 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>常用JS正则表达笔记 | 前端攻城狮</title>
+    <title>PHP使用array_multisort()进行多重条件排序 | 前端攻城狮</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="NingYu Wu">
     
 
     
-    <meta name="description" content="1.11位手机号:
-
-    
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert(&quot;手机号码有误，请重填&quot;);
-            return;
-        }">
+    <meta name="description" content="&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用JS正则表达笔记">
-<meta property="og:url" content="http://buptwny.github.io/2017/06/27/p20170627/index.html">
+<meta property="og:title" content="PHP使用array_multisort()进行多重条件排序">
+<meta property="og:url" content="http://buptwny.github.io/2017/07/11/p20170711-1/index.html">
 <meta property="og:site_name" content="前端攻城狮">
-<meta property="og:description" content="1.11位手机号:
-
-    
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert(&quot;手机号码有误，请重填&quot;);
-            return;
-        }">
-<meta property="og:updated_time" content="2017-06-27T11:47:49.000Z">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每">
+<meta property="og:image" content="http://buptwny.github.io/a6-01-01.png">
+<meta property="og:image" content="http://buptwny.github.io/a6-01-02.png">
+<meta property="og:updated_time" content="2017-07-11T03:42:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用JS正则表达笔记">
-<meta name="twitter:description" content="1.11位手机号:
-
-    
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert(&quot;手机号码有误，请重填&quot;);
-            return;
-        }">
+<meta name="twitter:title" content="PHP使用array_multisort()进行多重条件排序">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每">
+<meta name="twitter:image" content="http://buptwny.github.io/a6-01-01.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
 
@@ -99,14 +84,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/06/27/p20170627/" title="常用JS正则表达笔记" itemprop="url">常用JS正则表达笔记</a>
+      <a href="/2017/07/11/p20170711-1/" title="PHP使用array_multisort()进行多重条件排序" itemprop="url">PHP使用array_multisort()进行多重条件排序</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-06-27T11:47:17.000Z" itemprop="datePublished"> 发表于 2017-06-27</time>
+    <time datetime="2017-07-11T03:04:00.000Z" itemprop="datePublished"> 发表于 2017-07-11</time>
     
   </p>
 </header>
@@ -119,15 +104,9 @@
 		
 		</div>
 		
-		<p>1.11位手机号:</p>
-<pre>
-    <code>
-    if(!(/^1[34578]\d{9}$/.test(accountNum))){
-            alert("手机号码有误，请重填");
-            return;
-        }
-    </code>
-</pre>  
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每个项目有两个参数，一个为是否在售，另一个为销售额度。要求对这组项目数据进行排序，在售的和销售额度大的优先。我们可以定一个数组对这样的排序需求进模拟：<br><img src="a6-01-01.png" alt="图1"><br>其中”isGray”为0表示在售，为1表示售完，”num”表示项目销售额度，我们使用两个数组a和b分别保存五个项目的销售情况和销售额度，那么在排序前，各数组的情况如下：<br>arra: [1,0,0,1,0]<br>arrb: [2,4,3,8,6]<br>arr:  [a,b,c,d,e]<br>然后我们使用<br><img src="a6-01-02.png" alt="图2"><br>对项目数据进行在售情况和销售额度两个条件的排序，排序后各数组情况如下：<br>arra: [0,0,0,1,1]<br>arrb: [6,4,3,8,2]<br>arr:  [e,b,c,d,a]  </p>
+<p>分析排序原理：<br>该方法中，三个数组中每个值的位置都是一一对应的。<br>1.该方法首先按照第一个数组中的值进行升序排序，则b数组中的‘4’、‘3’、‘6’会被提到数组前面，而‘2’、‘8’被放到数组后面，arr中的‘b’、‘c’、‘e’被提到组数前面，‘a’和‘d’被放到数组后面。<br>2.在第一次排序后，由于第一个数组中的前三个值和后两个值分别相等，所以需要按照第二个数组中的值进行第二次排序，而第二个数组的排序策略是降序排列。所以b数组中的［4,3,6］排序为[6,4,3]，[2,8]排序为[8,2]。 arr中的[b,c,e]相应地排序为［e,b,c］<span style="color:red;">(因为b、c、e的销售情况都是在售0，即在第一个数组中对应位置的值相等，但是按照第二个数组中对应位置的销售额度来看，则为e&gt;b&gt;c，后面的a和d的排序以此类推)</span>，arr中的[a,d]相应地排序为[d,a]</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -139,7 +118,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://buptwny.github.io/2017/06/27/p20170627/" data-title="常用JS正则表达笔记 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
+	  <div data-url="http://buptwny.github.io/2017/07/11/p20170711-1/" data-title="PHP使用array_multisort()进行多重条件排序 | 前端攻城狮" data-tsina="2026326475" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -152,19 +131,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取">
-  <strong>上一篇：</strong><br/>
-  <span>
-  yii2框架通过自定义Controller进行登录态获取</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/06/20/p20170620/"  title="shell 命令 ls -la 参数解析">
+<a href="/2017/06/29/p20170629-1/"  title="yii2框架安装并使用redis扩展笔记">
  <strong>下一篇：</strong><br/> 
- <span>shell 命令 ls -la 参数解析
+ <span>yii2框架安装并使用redis扩展笔记
 </span>
 </a>
 </div>
@@ -173,7 +144,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2017/06/27/p20170627/" data-title="常用JS正则表达笔记" data-url="http://buptwny.github.io/2017/06/27/p20170627/"></div>
+	<div class="ds-thread" data-thread-key="2017/07/11/p20170711-1/" data-title="PHP使用array_multisort()进行多重条件排序" data-url="http://buptwny.github.io/2017/07/11/p20170711-1/"></div>
 </section>
 
 
