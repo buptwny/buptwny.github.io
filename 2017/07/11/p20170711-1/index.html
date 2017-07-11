@@ -17,13 +17,13 @@
 <meta property="og:url" content="http://buptwny.github.io/2017/07/11/p20170711-1/index.html">
 <meta property="og:site_name" content="前端攻城狮">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每">
-<meta property="og:image" content="http://buptwny.github.io/a6-01-01.png">
-<meta property="og:image" content="http://buptwny.github.io/a6-01-02.png">
-<meta property="og:updated_time" content="2017-07-11T03:42:44.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a06/a6-01-01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a06/a6-01-02.png">
+<meta property="og:updated_time" content="2017-07-11T03:45:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP使用array_multisort()进行多重条件排序">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每">
-<meta name="twitter:image" content="http://buptwny.github.io/a6-01-01.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a06/a6-01-01.png">
 <meta name="twitter:creator" content="@wpeace1212">
 <link rel="publisher" href="wpeace1212">
 
@@ -53,7 +53,7 @@
 				<h1 class="site-name"><a href="/" title="前端攻城狮">前端攻城狮</a></h1>
 				<h2 class="blog-motto">村里有个前端叫小吴</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -69,7 +69,7 @@
  					
 						<form class="search" action="http://zhannei.baidu.com/cse/search" target="_blank">
 							<label>Search</label>
-						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="搜索"><br>
+						<input name="s" type="hidden" value= 16217304412639600000 ><input type="text" name="q" size="30" placeholder="Search"><br>
 						</form>
 					
 					</li>
@@ -91,20 +91,20 @@
 		<a href="https://plus.google.com/wpeace1212?rel=author" title="NingYu Wu" target="_blank" itemprop="author">NingYu Wu</a>
 		
   <p class="article-time">
-    <time datetime="2017-07-11T03:04:00.000Z" itemprop="datePublished"> 发表于 2017-07-11</time>
+    <time datetime="2017-07-11T03:04:00.000Z" itemprop="datePublished"> Published 2017-07-11</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			
 		
 		</div>
 		
-		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每个项目有两个参数，一个为是否在售，另一个为销售额度。要求对这组项目数据进行排序，在售的和销售额度大的优先。我们可以定一个数组对这样的排序需求进模拟：<br><img src="a6-01-01.png" alt="图1"><br>其中”isGray”为0表示在售，为1表示售完，”num”表示项目销售额度，我们使用两个数组a和b分别保存五个项目的销售情况和销售额度，那么在排序前，各数组的情况如下：<br>arra: [1,0,0,1,0]<br>arrb: [2,4,3,8,6]<br>arr:  [a,b,c,d,e]<br>然后我们使用<br><img src="a6-01-02.png" alt="图2"><br>对项目数据进行在售情况和销售额度两个条件的排序，排序后各数组情况如下：<br>arra: [0,0,0,1,1]<br>arrb: [6,4,3,8,2]<br>arr:  [e,b,c,d,a]  </p>
+		<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;查看官方文档手册，array_multisort()方法的作用是对多个数组或者多维数组进行排序。这里重点介绍的是使用该方法对数组进行多重条件排序的实际使用场景。<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;比方说，在实际开发中，需要对一个数据数组进行排序，一共有五个项目数据，每个项目有两个参数，一个为是否在售，另一个为销售额度。要求对这组项目数据进行排序，在售的和销售额度大的优先。我们可以定一个数组对这样的排序需求进模拟：<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a06/a6-01-01.png" alt="图1"><br>其中”isGray”为0表示在售，为1表示售完，”num”表示项目销售额度，我们使用两个数组a和b分别保存五个项目的销售情况和销售额度，那么在排序前，各数组的情况如下：<br>arra: [1,0,0,1,0]<br>arrb: [2,4,3,8,6]<br>arr:  [a,b,c,d,e]<br>然后我们使用<br><img src="https://raw.githubusercontent.com/buptwny/buptwny.github.io/master/img/a06/a6-01-02.png" alt="图2"><br>对项目数据进行在售情况和销售额度两个条件的排序，排序后各数组情况如下：<br>arra: [0,0,0,1,1]<br>arrb: [6,4,3,8,2]<br>arr:  [e,b,c,d,a]  </p>
 <p>分析排序原理：<br>该方法中，三个数组中每个值的位置都是一一对应的。<br>1.该方法首先按照第一个数组中的值进行升序排序，则b数组中的‘4’、‘3’、‘6’会被提到数组前面，而‘2’、‘8’被放到数组后面，arr中的‘b’、‘c’、‘e’被提到组数前面，‘a’和‘d’被放到数组后面。<br>2.在第一次排序后，由于第一个数组中的前三个值和后两个值分别相等，所以需要按照第二个数组中的值进行第二次排序，而第二个数组的排序策略是降序排列。所以b数组中的［4,3,6］排序为[6,4,3]，[2,8]排序为[8,2]。 arr中的[b,c,e]相应地排序为［e,b,c］<span style="color:red;">(因为b、c、e的销售情况都是在售0，即在第一个数组中对应位置的值相等，但是按照第二个数组中对应位置的销售额度来看，则为e&gt;b&gt;c，后面的a和d的排序以此类推)</span>，arr中的[a,d]相应地排序为[d,a]</p>
   
 	</div>
@@ -149,17 +149,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
  
  
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -167,7 +167,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -186,13 +186,13 @@
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2026326475&verifier=039d33aa&dpc=1"></iframe>
 </div>
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -435,7 +435,7 @@ $(document).ready(function(){
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
