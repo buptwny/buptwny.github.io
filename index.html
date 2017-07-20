@@ -140,12 +140,13 @@ mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
   
 <section class="post" itemscope itemprop="blogitem">
   
-    <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">
+    <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">
   
-    <h1 itemprop="name">yii2框架自定义过滤器</h1>
+    <h1 itemprop="name">yii2框架通过自定义Controller进行登录态获取</h1>
     
      
-           <p itemprop="description" >1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定</p>
+           <p itemprop="description" >1.自定义controller，若cookie中存在username,则获取登录态和用户名： 
+其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进</p>
         
     
     <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished">2017-06-28</time>
@@ -160,13 +161,12 @@ mv composer.phar /usr/local/bin composer将composer命令设置为全局命令
   
 <section class="post" itemscope itemprop="blogitem">
   
-    <a href="/2017/06/28/p20170628/" title="yii2框架通过自定义Controller进行登录态获取" itemprop="url">
+    <a href="/2017/06/28/p20170628-2/" title="yii2框架自定义过滤器" itemprop="url">
   
-    <h1 itemprop="name">yii2框架通过自定义Controller进行登录态获取</h1>
+    <h1 itemprop="name">yii2框架自定义过滤器</h1>
     
      
-           <p itemprop="description" >1.自定义controller，若cookie中存在username,则获取登录态和用户名： 
-其中，init()方法继承父类的init，在该MyController或是继承MyController的控制器实例化的时候，会掉用_construct()函数，并掉用init()方法进</p>
+           <p itemprop="description" >1.自定义过滤器TestFilter，继承ActionFilter,重写beforeAction和afterAction:2.定义TestController:若去掉’only’参数，则该过滤器会对TestController中的所有action起作用:具体的实际应用可以通过自定</p>
         
     
     <time datetime="2017-06-28T07:50:17.000Z" itemprop="datePublished">2017-06-28</time>
